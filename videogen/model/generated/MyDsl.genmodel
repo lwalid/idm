@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/videogen/src-gen" editDirectory="/videogen.edit/src"
+    editorDirectory="/videogen.editor/src" modelPluginID="videogen" forceOverwrite="true"
+    modelName="MyDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="videogen.edit" editorPluginID="videogen.editor"
+    runtimeVersion="2.11">
+  <genPackages prefix="MyDsl" basePackage="org.xtext.example.mydsl" disposableProviderFactory="true"
+      fileExtensions="mydsl" ecorePackage="MyDsl.ecore#/">
+    <genClasses ecoreClass="MyDsl.ecore#//VideoGen">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//VideoGen/video"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Video"/>
+    <genClasses ecoreClass="MyDsl.ecore#//Mandatory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Mandatory/videoSeq"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Optional">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Optional/videoSeq"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Alternative">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Alternative/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Alternative/videoSeq"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//VideoSeq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//VideoSeq/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//VideoSeq/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
