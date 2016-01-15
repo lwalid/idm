@@ -2,8 +2,24 @@ grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
 
 generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+VideoGen:
+    {VideoGen}
+    'VideoGen' '{' video+=Video*'}';
+   
+Video:
+    (Mandatory | Optional | Alternative);
+   
+Mandatory:
+    'mandatory' videoSeq = VideoSeq;
+
+       
+Optional:
+    'Optional' videoSeq =VideoSeq;
+
+
+Alternative:
+    'Alternative' (name=ID)? '{' (videoSeq+=VideoSeq)+ "}"
+;
+
+VideoSeq:
+    'VideoSeq' (name=ID)? text=STRING ;
