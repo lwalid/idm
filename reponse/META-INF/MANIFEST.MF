@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Reponse
+Bundle-SymbolicName: reponse
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: reponse.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ videogen;bundle-version="1.0.0",
+ videogen.tests;bundle-version="1.0.0",
+ videogen.ui;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
